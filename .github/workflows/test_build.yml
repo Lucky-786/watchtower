@@ -10,5 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: lscpu
-      - run : free -h
+      - run : docker build -t lutan14/cicd/myapp:latest .
+      - run : docker login -u lutan14 -p ${{secrets.DOCKER_PASSWORD}}
+      - run : docker push lutan14/cicd/myapp:latest
