@@ -1,7 +1,10 @@
-from fastapi import FastAPI
+from flask import render_template
+from app import app
 
-app=FastAPI()
+@app.route('/')
+def home():
+    return "Hello world!"
 
-@app.get('/')
-def create():
-    return 'Running server'
+@app.route('/template')
+def template():
+    return render_template('home.html')
