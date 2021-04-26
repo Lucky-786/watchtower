@@ -1,10 +1,10 @@
-from flask import render_template
-from app import app
+from flask import Flask
+app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return "Hello world!"
+def hello():
+	return "welcome to the flask tutorials"
 
-@app.route('/template')
-def template():
-    return render_template('home.html')
+
+if __name__ == "__main__":
+	app.run(host ='0.0.0.0', port = 5001, debug = True)
