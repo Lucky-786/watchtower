@@ -39,7 +39,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: lutan14/watchtower:v1
+          tags: lutan14/watchtower:v2
 
       # - run  : docker build -t lutan14/cicd:latest .
       # - run  : docker login -u lutan14 -p ${{secrets.DOCKER_PASSWORD}}

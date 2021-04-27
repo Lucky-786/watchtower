@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-	return "welcome to the flask tutorials"
+	return "This image has been changed"
 
 
 if __name__ == "__main__":
